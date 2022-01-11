@@ -8,7 +8,7 @@ const config = {
   host: 'localhost',
   port: '',
   user: 'root',
-  password: '12345678',
+  password: 'bruno123456789',
   database: 'car_dealership'
 };
 
