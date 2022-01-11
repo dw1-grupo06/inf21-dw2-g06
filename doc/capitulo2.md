@@ -6,27 +6,27 @@ Esta API consegue trabalhar com 4 recursos diferentes, sendo esses:
 * **name** -> (string) Nome do motor;
 * **horsepower** -> (int) Potência do motor em cavalos;
 * **brand** -> (string) Marca do motor;
-* **car_id** -> (int) Valor utilizado para estabelecer a relação carro/motor;
 
 ## Manufacturer:
 * **id** -> (int) Valor identificativo do recurso;
 * **name** -> (string) Nome do fabricante;
 * **founded** -> (int) Ano em que fabricante foi fundado;
 * **description** -> (string) Descrição do fabricante;
-* **car_id** -> (int) Valor utilizado para estabelecer a relação carro/fabricante;
 
 ## Owner:
 * **id** -> (int) Valor identificativo do recurso;
 * **name** -> (string) Nome do dono;
 * **age** -> (int) Idade do dono;
 * **sex** -> (string) Sexo do dono;
-* **car_id** -> (int) Valor utilizado para estabelecer a relação carro/dono;
 
 ## Car:
 * **id** -> (int) Valor identificativo do recurso;
 * **name** -> (string) Nome/modelo do carro;
 * **description** -> (string) Descrição do carro;
 * **color** -> (string) Cor do carro;
+* **engineId** -> (int) Valor utilizado para estabelecer a ligação motor/carro;
+* **manufacturerId** -> (int) Valor utilizado para estabelecer a ligação fabricante/carro;
+* **ownerId** -> (int) Valor utilizado para estabelecer a ligação dono/carro;
 
 **Nota:** O recurso carro serve como recurso "mãe", sendo a ligação entre todos os outros recursos.
 
