@@ -7,64 +7,86 @@ A API tem o intuito de fazer a gestão de um Concessionário de Automóveis. Con
 
 A API é composta por 7 controladores:
 
-* EngineController
 * CarController
-* ManufacturesController
-* OwnerController
+* EngineController
 * EngineCarController
-* OwnerCarController
+* ManufacturesController
 * ManufacturerCarController
+* OwnerController
+* OwnerCarController
+
 
 </br>
 
-O controlador **EnginesController** é composto por 5 funcionalidades baseadas em verbos do protocolo HTTP:
-* **GET** -> Retorna todos os motores presentes na base de dados.
-* **POST** -> Adiciona um motor à base de dados.
-* **GET{id}** -> Dado um ID passado como parâmetro, retorna o respetivo motor.
-* **PUT{id}** -> Efetua alterações a um dado motor com um respetivo ID passado como parâmetro.
-* **DELETE{id}** -> Remove da base de dados um motor com um respetivo ID passado como parâmetro.
-
-<br>
-
-O controlador **CarsController** é composto por 5 funcionalidades baseadas em verbos do protocolo HTTP:
-* **GET** -> Retorna todos os carros presentes na base de dados.
-* **POST** -> Adiciona um carro à base de dados.
-* **GET{id}** -> Dado um ID passado como parâmetro, retorna o respetivo carro.
+O controlador **CarController** é composto por 8 funcionalidades baseadas em verbos do protocolo HTTP:
+* **GET** -> Retorna o numero de carros presentes na base de dados.
 * **PUT{id}** -> Efetua alterações a um dado carro com um respetivo ID passado como parâmetro.
-* **DELETE{id}** -> Remove da base de dados um carro com um respetivo ID passado como parâmetro.
+* **PATCH{id}** -> Efetua alterações a um dado carro com um respetivo ID passado como parâmetro.
+* **GET{id}** -> Dado um ID passado como parâmetro, retorna o respetivo carro.
+* **DELETE{id}** -> Elimina um carro da base de dados com um dado ID passado como parâmetro.
+* **POST** -> Adiciona um carro à base de dados.
+* **PATCH** -> Efetua alterações a todos os carros presentes na base de dados.
+* **GET** -> Retorna um array com todos os carros presentes na base de dados.
 
 <br>
 
-O controlador **ManufacturersController** é composto por 5 funcionalidades baseadas em verbos do protocolo HTTP:
-* **GET** -> Retorna todos os fabricantes presentes na base de dados.
-* **POST** -> Adiciona um fabricante à base de dados.
-* **GET{id}** -> Dado um ID passado como parâmetro, retorna o respetivo fabricante.
-* **PUT{id}** -> Efetua alterações a um dado fabricante com um respetivo ID passado como parâmetro.
-* **DELETE{id}** -> Remove da base de dados um fabricante com um respetivo ID passado como parâmetro.
+O controlador **EngineController** é composto por 8 funcionalidades baseadas em verbos do protocolo HTTP:
+* **GET** -> Retorna o numero de motores presentes na base de dados.
+* **PUT{id}** -> Efetua alterações a um dado motor com um respetivo ID passado como parâmetro.
+* **PATCH{id}** -> Efetua alterações a um dado motor com um respetivo ID passado como parâmetro.
+* **GET{id}** -> Dado um ID passado como parâmetro, retorna o respetivo motor.
+* **DELETE{id}** -> Elimina um motor da base de dados com um dado ID passado como parâmetro.
+* **POST** -> Adiciona um motor à base de dados.
+* **PATCH** -> Efetua alterações a todos os motores presentes na base de dados.
+* **GET** -> Retorna um array com todos os motores presentes na base de dados.
 
 <br>
 
-O controlador **OwnersController** é composto por 5 funcionalidades baseadas em verbos do protocolo HTTP:
-* **GET** -> Retorna todos os proprietários presentes na base de dados.
-* **POST** -> Adiciona um proprietário à base de dados.
+O controlador **EngineCarController** é composto por 4 funcionalidades baseadas em verbos do protocolo HTTP:
+* **POST{id}** -> Adiciona um carro a um determinado motor com um ID passado como parâmetro.
+* **PATCH{id}** -> Efetua alterações a todos os carros associados a um motor com um ID passado como parâmetro.
+* **GET{id}** -> Retorna todos os carros associados a um motor com um ID passado como parâmetro.
+* **DELETE{id}** -> Elimina todos os carros da base de dados associados a um motor com um ID passado como parâmetro.
+
+<br>
+
+O controlador **ManufacturerController** é composto por 8 funcionalidades baseadas em verbos do protocolo HTTP:
+* **GET** -> Retorna o numero de construtores presentes na base de dados.
+* **PUT{id}** -> Efetua alterações a um dado construtor com um respetivo ID passado como parâmetro.
+* **PATCH{id}** -> Efetua alterações a um dado construtor com um respetivo ID passado como parâmetro.
+* **GET{id}** -> Dado um ID passado como parâmetro, retorna o respetivo construtor.
+* **DELETE{id}** -> Elimina um construtor da base de dados com um dado ID passado como parâmetro.
+* **POST** -> Adiciona um construtor à base de dados.
+* **PATCH** -> Efetua alterações a todos os construtores presentes na base de dados.
+* **GET** -> Retorna um array com todos os construtores presentes na base de dados.
+
+<br>
+
+O controlador **ManufacturerCarController** é composto por 4 funcionalidade baseada nos verbos do protocolo HTTP:
+* **POST{id}** -> Adiciona um carro a um determinado construtor com um ID passado como parâmetro.
+* **PATCH{id}** -> Efetua alterações a todos os carros associados a um construtor com um ID passado como parâmetro.
+* **GET{id}** -> Retorna todos os carros associados a um construtor com um ID passado como parâmetro.
+* **DELETE{id}** -> Elimina todos os carros da base de dados associados a um construtor com um ID passado como parâmetro.
+
+<br>
+
+O controlador **OwnerController** é composto por 8 funcionalidade baseada nos verbos do protocolo HTTP:
+* **GET** -> Retorna o numero de proprietários presentes na base de dados.
+* **PUT{id}** -> Efetua alterações a um dado proprietário com um respetivo ID passado como parâmetro.
+* **PATCH{id}** -> Efetua alterações a um dado proprietário com um respetivo ID passado como parâmetro.
 * **GET{id}** -> Dado um ID passado como parâmetro, retorna o respetivo proprietário.
-* **PUT{id}** -> Efetua alterações a um dado prprietário com um respetivo ID passado como parâmetro.
-* **DELETE{id}** -> Remove da base de dados um prorpietário com um respetivo ID passado como parâmetro.
+* **DELETE{id}** -> Elimina um proprietário da base de dados com um dado ID passado como parâmetro.
+* **POST** -> Adiciona um proprietário à base de dados.
+* **PATCH** -> Efetua alterações a todos os proprietários presentes na base de dados.
+* **GET** -> Retorna um array com todos os proprietários presentes na base de dados.
 
 <br>
 
-O controlador **EnginesByCarController** é composto por 1 funcionalidade baseada nos verbos do protocolo HTTP:
-* **GET{id}** -> Retorna todos os motores do carro que tem o ID passado como parâmetro.
-
-<br>
-
-O controlador **OwnersByCarController** é composto por 1 funcionalidade baseada nos verbos do protocolo HTTP:
-* **GET{id}** -> Retorna todos os proprietários do carro que tem o ID passado como parâmetro.
-
-<br>
-
-O controlador **ManufacturersByCarController** é composto por 1 funcionalidade baseada nos verbos do protocolo HTTP:
-* **GET{id}** -> Retorna todos os fabricantes do carro que tem o ID passado como parâmetro.
+O controlador **OwnerCarController** é composto por 4 funcionalidade baseada nos verbos do protocolo HTTP:
+* **POST{id}** -> Adiciona um carro a um determinado prorietário com um ID passado como parâmetro.
+* **PATCH{id}** -> Efetua alterações a todos os carros associados a um prorietário com um ID passado como parâmetro.
+* **GET{id}** -> Retorna todos os carros associados a um prorietário com um ID passado como parâmetro.
+* **DELETE{id}** -> Elimina todos os carros da base de dados associados a um prorietário com um ID passado como parâmetro.
 
 <br>
 
