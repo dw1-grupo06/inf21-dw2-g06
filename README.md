@@ -1,4 +1,4 @@
-# Car Dealership API / Momento de Avaliação 2
+# Car Dealership API / Momento de Avaliação 3
 
 Repositório criado no âmbito do projeto desenvolvido para a Unidade Curricular de 'Desenvolvimento Web I', uma cadeira de segundo ano no 'ISMAI', no curso de 'Informática'.<br>
 Desenvolvido pelo Grupo 6: André Cacheira ([@Cacheira14](https://github.com/Cacheira14)), Bruno Sousa ([@brunomfsrw1](https://github.com/brunomfsrw1)), Raul Gonçalves ([@RaulGoncalves21x](https://github.com/RaulGoncalves21x)).
@@ -36,6 +36,7 @@ Mais especificamente:
 
 * [Docker](https://docs.docker.com/get-started/overview/)
 * [NodeJS](https://nodejs.org/en/about/)
+* [React-Admin](https://marmelab.com/react-admin/Readme.html)
 
 ## Relatório
 
