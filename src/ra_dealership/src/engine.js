@@ -1,13 +1,17 @@
-import { Create, Datagrid, Edit, EditButton, List, NumberField, NumberInput, SimpleForm, TextField, TextInput } from "react-admin";
+import { Create, Datagrid, DeleteButton, Edit, EditButton, List, NumberField, NumberInput, ReferenceInput, SearchInput, SelectInput, SimpleForm, TextField, TextInput } from "react-admin";
+
+const postFilters = [
+    <SearchInput source="name" alwaysOn />,
+];
 
 export const EngineList = props => (
-    <List {...props}>
+    <List {...props} filters={postFilters}>
         <Datagrid rowClick="edit">
-            <NumberField textAlign="center" source="id" />
             <TextField textAlign="center" source="name" />
             <NumberField textAlign="center" source="horsepower" />
             <TextField textAlign="center" source="brand" />
             <EditButton textAlign="center" />
+            <DeleteButton textAlign="center" />
         </Datagrid>
     </List>
 );
@@ -15,7 +19,6 @@ export const EngineList = props => (
 export const EngineEdit = props => (
     <Edit {...props}>
         <SimpleForm>
-            <NumberInput source="id" />
             <TextInput source="name" />
             <NumberInput source="horsepower" />
             <TextInput source="brand" />

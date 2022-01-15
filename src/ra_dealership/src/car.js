@@ -1,10 +1,22 @@
-import { Create, Datagrid, Edit, EditButton, List, NumberField, NumberInput, ReferenceField, ReferenceInput, SelectInput, SimpleForm, TextField, TextInput } from "react-admin";
+import { Create, Datagrid, DeleteButton, Edit, EditButton, List, NumberField, ReferenceField, ReferenceInput, SearchInput, SelectInput, SimpleForm, TextField, TextInput } from "react-admin";
 import { ColorField, ColorInput } from 'react-admin-color-input';
 
+const postFilters = [
+    <SearchInput source="name" alwaysOn />,
+    <ReferenceInput source="engineId" reference="engines">
+        <SelectInput optionText="name" />
+    </ReferenceInput>,
+    <ReferenceInput source="manufacturerId" reference="manufacturers">
+        <SelectInput optionText="name" />
+    </ReferenceInput>,
+    <ReferenceInput source="ownerId" reference="owners">
+        <SelectInput optionText="name" />
+    </ReferenceInput>
+];
+
 export const CarList = props => (
-    <List {...props}>
+    <List {...props} filters={postFilters}>
         <Datagrid rowClick="edit">
-            <NumberField textAlign="center" source="id" />
             <TextField textAlign="center" source="name" />
             <TextField textAlign="center" source="description" />
             <ColorField source="color" />
@@ -18,6 +30,7 @@ export const CarList = props => (
                 <TextField source="name" />
             </ReferenceField>
             <EditButton textAlign="center" />
+            <DeleteButton textAlign="center" />
         </Datagrid>
     </List>
 );
@@ -25,7 +38,6 @@ export const CarList = props => (
 export const CarEdit = props => (
     <Edit {...props}>
         <SimpleForm>
-            <NumberInput source="id" />
             <TextInput source="name" />
             <TextInput source="description" />
             <ColorInput source="color" />
