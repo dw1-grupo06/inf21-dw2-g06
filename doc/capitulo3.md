@@ -2,13 +2,27 @@
 
 ## 3.1 Desenvolvimento
 
-### 3.1.1 
+### 3.1.1 LoopBack 4
 
+Para o desenvolvimento deste projeto, foi utilizada a ferramenta LoopBack 4 com vista a automatizar o processo de criação das funcionalidades da API.
 
+Numa primeira fase, começamos por criar a aplicação com o Loopback 4. De seguida, foi indicado os modelos através do comando "lb4 model" e toda a informação para a conexão à base de dados com o comando "lb4 datasource". Por fim, indicamos o repositório responsável pela conexão entre os modelos à base de dados, tendo sido criado um repositório e um controlador para cada modelo.
 
-### 3.1.2 
+<br>
 
+Depois de concluido todos os passos anteriores, indicamos todas as relações necessárias com o comando "lb4 relation" para que, quando formos criar os controladores, garantir que as relações existentes na base de dados sejam cumpridas. Depois de todas as relações estarem devidamente indicadas, passamos ao passo de criação dos controladores com o comando "lb4 controller".
 
+<br>
+
+Por fim, para executarmos todo o desenvolvimento efetuado anteriormente, usamos o comando "npm run migrate" para migrar os modelos para a base de dados e utilizou-se o comando "npm start" para iniciar a aplicação e analisar o resultado final.
+
+### 3.1.2 React Admin
+
+Foi criada uma interface gráfica para que a utilização da API seja mais confortável e mais intuitiva. Para isso, utilizamos as ferramentas do React Admin.
+
+<br>
+
+Começamos por criar a nossa aplicação com o comando "npx create-react-app". Depois de criada a aplicação, instalamos as dependencias necessárias com o comando "npm i react-admin react-admin-lb4 prop-types". Logo depois de executado o passo anterior, editamos o ficheiro **package.json** com o intuito de alterar a default port para o valor 3006. De seguida, iniciamos o servidor com o comando "npm start". Nesta fase, colocamos a funcionar a API juntamente com a nossa aplicação React Admin.
 
 ### 3.1.3 Docker
 
@@ -20,7 +34,7 @@ Para efetuar a instalação e compilação deste projeto, estão abaixo apresent
 
 <br>
 
-* Passo 1: 
+* Passo 1: Importar o ficheiro **['docker-compose.yaml'](../docker-compose.yaml)**;
 * Passo 2: Abrir a linha de comandos (CLI);
 * Passo 3: Entrar no diretório onde se encontra o ficheiro importado anteriormente;
 * Passo 4: Executar o seguinte comando **'docker-compose up'**;
@@ -32,11 +46,7 @@ Seguindo os passos corretamente, deve conseguir utilizar a API.
 
 ## 3.3 Instruções de Utilização
 
-Depois de instalada, basta executar os dois containers através do Docker Desktop e ligar-se ao endereço http://localhost:8080/docs/ através do seu browser.
-Aqui terá acesso completo a todas as funções da API.
-As operações estarão visivelmente marcadas com os verbos HTTP que lhes corresponde e terão uma breve descrição da sua função. Selecionando uma das operações um menu irá ser visível onde estará o botão "Try it out" exposto. Premindo este botão temos acesso a um campo de texto caso esteja a inserir ou a editar um recurso, ou terá imediatamente o resultado da sua operação, se esta for de consulta.
 
-**No caso de inserção ou atualização:** Como referido anteriormente, a API possui três exemplos para cada recurso: dois com o aspeto final do recurso e um com o aspeto recomendado para a inserção. É então recomendado que quando crie ou atualize um recurso, utilize este exemplo, geralmente denominado por '*NomeRecurso*Insert' ou '*NomeRecurso*Update'. Estes exemplos terão valores como *placeholders* que deverão ser eliminados a fim de evitar confusão.
 
 ## 3.4 Detalhes de Implementação
 
