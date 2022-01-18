@@ -5,10 +5,10 @@ const config = {
   name: 'car_dealership_db',
   connector: 'mysql',
   url: '',
-  host: 'localhost',
+  host: 'mysql',
   port: '',
   user: 'root',
-  password: '1011',
+  password: '12345678',
   database: 'car_dealership'
 };
 

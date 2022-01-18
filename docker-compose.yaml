@@ -3,10 +3,7 @@ version: '3.7'
 services:
   mysql:
     container_name: dealership-mysql
-    image: dealership-mysql
-    build:
-      context: .
-      dockerfile: ./dockerfile.mysql
+    image: dwgrupo06/rep3:m3-mysql
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
@@ -20,14 +17,22 @@ services:
     depends_on:
       - mysql
     container_name: dealership-app
-    image: dealership-app
-    build:
-      context: .
-      dockerfile: ./dockerfile
+    image: dwgrupo06/rep4:m3-app
     environment:
       NODE_ENV: production
     ports:
       - 3000:3000
+    networks:
+      - dealership-network
+  react:
+    depends_on:
+      - app
+    container_name: dealership-react
+    image: dwgrupo06/rep5:m3-react
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3006:3000
     networks:
       - dealership-network
 
