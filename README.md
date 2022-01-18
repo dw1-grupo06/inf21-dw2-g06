@@ -13,7 +13,7 @@ Desta forma, o recurso 'Carro' será o recurso central, já que este terá um do
 * **Código fonte API** presente na pasta [API](src/API).
 * **Código fonte React-Admin** presente na pasta [ra_dealership](src/ra_dealership).
 * **Documentação** presente na pasta [doc](doc/).
-* **[Documento MYSQL](dealership_v1.sql)** para criação da Base de Dados.
+* **[Documento MYSQL](database_v1.sql)** para criação da Base de Dados.
 * **[Documento Docker-compose](docker-compose.yaml)** para puxar as imagens dos repositórios DockerHub e montar a aplicação.
 
 ## Galeria
