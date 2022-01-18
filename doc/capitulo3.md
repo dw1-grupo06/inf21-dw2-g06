@@ -8,11 +8,7 @@ Para o desenvolvimento deste projeto, foi utilizada a ferramenta LoopBack 4 com 
 
 Numa primeira fase, começou-se por criar a aplicação com recurso ao LoopBack 4. De seguida, criou-se os modelos através do comando **"lb4 model"** e toda a informação para a conexão à base de dados com o comando **"lb4 datasource"**. Por fim, construiu-se o repositório responsável pela conexão entre os modelos à base de dados. Foi criado um controlador para cada modelo, de forma a ser possível manipular individualmente.
 
-<br>
-
 Depois de concluido todos os passos anteriores, indicou-se todas as relações existentes com o comando **"lb4 relation"** para que, quando se fosse criar os controladores, garantir que as relações existentes na base de dados sejam cumpridas. Depois de todas as relações estarem devidamente indicadas, passamos ao passo de criação dos controladores com o comando "lb4 controller".
-
-<br>
 
 Por fim, para se executar todo o desenvolvimento efetuado anteriormente, usou-se o comando **"npm run migrate"** para migrar os modelos para a base de dados e utilizou-se o comando **"npm start"** para iniciar a aplicação e analisar o resultado final.
 
@@ -20,22 +16,15 @@ Por fim, para se executar todo o desenvolvimento efetuado anteriormente, usou-se
 
 Foi criada uma interface gráfica para que a utilização da API seja mais confortável e intuitiva. Para isso, utilizámos as ferramentas do React-Admin.
 
-<br>
-
 Começou-se por criar a nossa aplicação com o comando **"npx create-react-app"**. Depois de criada a aplicação, instalou-se as dependências necessárias com o comando **"npm i react-admin react-admin-lb4 prop-types"**. Após executado o passo anterior, editou-se o ficheiro **package.json** com o intuito de alterar a default port para o valor 3006. De seguida, iniciou-se o servidor com o comando **"npm start"**. Nesta fase, colocamos a funcionar a API juntamente com a nossa aplicação React Admin.
 
-<br>
-
 De forma a ser possível apresentar, editar e criar novos elementos, através dos controladores presentes na API, foram utilizadas os métodos presentes no React-Admin **"ListGuesser"** e **"EditGuesser"**, tendo sido alterados de forma a serem apresentados corretamente.
-
-<br>
 
 Ficheiros de manipulação de cada recurso da Base de Dados:
 * **['Car'](../src/ra_dealership/src/car.js)**;
 * **['Manufacturer'](../src/ra_dealership/src/manufacturer.js)**;
 * **['Engine'](../src/ra_dealership/src/engine.js)**;
 * **['Owner'](../src/ra_dealership/src/owner.js)**;
-
 
 ### 3.1.3 Docker
 
@@ -45,15 +34,11 @@ Com vista a API poder ser montada rapidamente e utilizada através de uma interf
 
 Para efetuar a instalação e compilação deste projeto, estão abaixo apresentados os passos que serão necessários:
 
-<br>
-
 * Passo 1: Importar o ficheiro **['docker-compose.yaml'](../docker-compose.yaml)**;
 * Passo 2: Abrir a linha de comandos (CLI);
 * Passo 3: Entrar no diretório onde se encontra o ficheiro importado anteriormente;
 * Passo 4: Executar o seguinte comando **'docker-compose up'**;
 * Passo 5: Abrir o Browser no URL **'localhost:3006'**.
-
-<br>
 
 ## 3.3 Instruções de Utilização
 
